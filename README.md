@@ -35,3 +35,5 @@ Method visualization: matrix transformation playback, 2D linear-system geometry,
 ## Multilingual static site
 
 The site contains 65 static pages (five languages, 12 calculator routes plus a catalog per language). English uses unprefixed URLs; other languages use /ru/, /fr/, /uk/, /de/. The URL fixes the language and the switcher links to the matching translated page. The mathematical engine and styles remain shared. Production canonical URLs and sitemap use https://cmvi.kramarenko.info; configure the domain before submitting the sitemap. Regenerate after content changes with `node scripts/build-site.cjs`; generated pages are committed so the existing Cloudflare build configuration does not change. Run `node --test tests/site.test.cjs` to validate routes and metadata.
+
+Language navigation preserves current calculator inputs in tab-scoped session storage when available and recomputes unchanged previously solved input. Direct links remain language-specific; there is no forced language redirect.
