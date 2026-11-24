@@ -14,6 +14,8 @@ Open http://localhost:8080. No backend or secrets are needed.
 
 Deploy from this branch with the root Wrangler configuration: `npx wrangler deploy`. Configure a development domain before adding a production route. No custom domain is configured here.
 
+For Git-connected Workers Builds, select `web` as the production branch in the Worker's build settings (this is the development Worker for now). Use repository root `/`, leave the build command empty, and set the deploy command to `npx wrangler deploy`. The legacy `master` branch does not contain the web assets or Wrangler configuration.
+
 ## Scope
 
 Implemented: Gaussian elimination, Jacobi, Gauss–Seidel, determinant, inverse matrix, Newton, fixed-point iteration, Lagrange interpolation, trapezoidal and Simpson integration, and finite-difference sweep for linear second-order boundary-value problems. Krylov currently produces the characteristic polynomial for supported cyclic matrices only; eigenvalues/eigenvectors remain unfinished. The web methods use independent JavaScript implementations of the same mathematical algorithms, not a line-by-line Java translation. Newton uses a numerical derivative and an initial guess; fixed-point iteration takes an explicit g(x). Sweep uses first-order Robin boundary discretization. Legacy file import, complete step-by-step reports, localization, and parity with the original Java examples remain to be completed. JSON result export is available. Expressions use an explicit parser, not eval.
