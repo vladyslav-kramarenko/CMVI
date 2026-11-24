@@ -31,3 +31,7 @@ Root and quadrature regression tests: `node --test tests/root-integration.test.c
 All 12 methods include theory and data-dependent applicability diagnostics. Sufficient convergence conditions, numerical diagnostics, and hard requirements are distinguished. Sampling cannot certify smoothness or absence of singularities. Run `node --test tests/applicability.test.cjs` for the diagnostic regression suite.
 
 Method visualization: matrix transformation playback, 2D linear-system geometry, determinant/inverse area transformations, iteration residuals and trajectories, Lagrange basis curves, quadrature refinement, finite-difference mesh and sweep pivots, and complex eigenvalue plots. Visuals use actual calculation data and are included in HTML/print reports; higher-dimensional systems use matrix/iteration views. Run `node --test tests/visualization.test.cjs`.
+
+## Multilingual static site
+
+The site contains 65 static pages (five languages, 12 calculator routes plus a catalog per language). English uses unprefixed URLs; other languages use /ru/, /fr/, /uk/, /de/. The URL fixes the language and the switcher links to the matching translated page. The mathematical engine and styles remain shared. Production canonical URLs and sitemap use https://cmvi.kramarenko.info; configure the domain before submitting the sitemap. Regenerate after content changes with `node scripts/build-site.cjs`; generated pages are committed so the existing Cloudflare build configuration does not change. Run `node --test tests/site.test.cjs` to validate routes and metadata.

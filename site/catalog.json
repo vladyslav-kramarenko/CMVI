@@ -1,0 +1,368 @@
+{
+  "origin": "https://cmvi.kramarenko.info",
+  "langs": [
+    "en",
+    "ru",
+    "fr",
+    "uk",
+    "de"
+  ],
+  "groups": [
+    [
+      "Linear algebra",
+      "Линейная алгебра",
+      "Algèbre linéaire",
+      "Лінійна алгебра",
+      "Lineare Algebra"
+    ],
+    [
+      "Nonlinear equations",
+      "Нелинейные уравнения",
+      "Équations non linéaires",
+      "Нелінійні рівняння",
+      "Nichtlineare Gleichungen"
+    ],
+    [
+      "Eigenvalues",
+      "Собственные значения",
+      "Valeurs propres",
+      "Власні значення",
+      "Eigenwerte"
+    ],
+    [
+      "Interpolation",
+      "Интерполяция",
+      "Interpolation",
+      "Інтерполяція",
+      "Interpolation"
+    ],
+    [
+      "Numerical integration",
+      "Численное интегрирование",
+      "Intégration numérique",
+      "Чисельне інтегрування",
+      "Numerische Integration"
+    ],
+    [
+      "Differential equations",
+      "Дифференциальные уравнения",
+      "Équations différentielles",
+      "Диференціальні рівняння",
+      "Differentialgleichungen"
+    ]
+  ],
+  "catalog": [
+    [
+      "gauss",
+      "gaussian-elimination",
+      0,
+      [
+        "Gaussian elimination",
+        "Метод Гаусса",
+        "Méthode de Gauss",
+        "Метод Гауса",
+        "Gauß-Verfahren"
+      ],
+      [
+        "Solve linear systems using Gauss–Jordan row operations, partial pivoting and residual checks.",
+        "Решайте системы линейных уравнений методом Гаусса — Жордана с выбором главного элемента и проверкой невязки.",
+        "Résolvez des systèmes linéaires par Gauss-Jordan avec pivot partiel et vérification du résidu.",
+        "Розв’язуйте системи лінійних рівнянь методом Гауса — Жордана з вибором провідного елемента та перевіркою нев’язки.",
+        "Lineare Gleichungssysteme mit Gauß-Jordan, partieller Pivotisierung und Residuenprüfung lösen."
+      ],
+      "4x₁ + x₂ = 6; 2x₁ + 3x₂ = 8 → x₁ = 1, x₂ = 2"
+    ],
+    [
+      "jacobi",
+      "jacobi-method",
+      0,
+      [
+        "Jacobi method",
+        "Метод Якоби",
+        "Méthode de Jacobi",
+        "Метод Якобі",
+        "Jacobi-Verfahren"
+      ],
+      [
+        "Solve linear equations by Jacobi iteration with diagonal dominance diagnostics and convergence graphs.",
+        "Решайте системы методом Якоби с проверкой диагонального преобладания и графиком сходимости.",
+        "Résolvez des systèmes par Jacobi avec diagnostic de dominance diagonale et courbe de convergence.",
+        "Розв’язуйте системи методом Якобі з перевіркою діагональної переваги та графіком збіжності.",
+        "Gleichungssysteme mit Jacobi, Diagonaldominanzprüfung und Konvergenzdiagrammen lösen."
+      ],
+      "4x₁ + x₂ = 6; 2x₁ + 3x₂ = 8; x⁽⁰⁾ = (0, 0) → x ≈ (1, 2)"
+    ],
+    [
+      "seidel",
+      "gauss-seidel-method",
+      0,
+      [
+        "Gauss–Seidel method",
+        "Метод Гаусса — Зейделя",
+        "Méthode de Gauss-Seidel",
+        "Метод Гауса — Зейделя",
+        "Gauß-Seidel-Verfahren"
+      ],
+      [
+        "Explore sequential updates, convergence conditions and residual history for linear systems.",
+        "Изучайте последовательные обновления, условия сходимости и историю невязки при решении линейных систем.",
+        "Explorez les mises à jour successives, les conditions de convergence et l’historique des résidus.",
+        "Досліджуйте послідовні оновлення, умови збіжності та історію нев’язки лінійних систем.",
+        "Sequenzielle Aktualisierungen, Konvergenzbedingungen und Residuenverlauf untersuchen."
+      ],
+      "4x₁ + x₂ = 6; 2x₁ + 3x₂ = 8; x⁽⁰⁾ = (0, 0) → x⁽¹⁾ = (1.5, 5/3) → x ≈ (1, 2)"
+    ],
+    [
+      "det",
+      "determinant",
+      0,
+      [
+        "Matrix determinant",
+        "Определитель матрицы",
+        "Déterminant de matrice",
+        "Визначник матриці",
+        "Matrixdeterminante"
+      ],
+      [
+        "Calculate a square matrix determinant with pivot products, row swaps and geometric area scaling.",
+        "Вычисляйте определитель квадратной матрицы с учётом перестановок строк и геометрического масштаба площади.",
+        "Calculez le déterminant d’une matrice carrée avec pivots, échanges de lignes et interprétation géométrique.",
+        "Обчислюйте визначник квадратної матриці з перестановками рядків та геометричним масштабуванням площі.",
+        "Determinante einer quadratischen Matrix mit Pivotprodukten, Zeilentausch und Flächenskalierung berechnen."
+      ],
+      "A = [[4, 1], [2, 3]] → det(A) = 4 · 3 − 1 · 2 = 10"
+    ],
+    [
+      "inverse",
+      "inverse-matrix",
+      0,
+      [
+        "Inverse matrix",
+        "Обратная матрица",
+        "Matrice inverse",
+        "Обернена матриця",
+        "Inverse Matrix"
+      ],
+      [
+        "Find a matrix inverse using Gauss–Jordan elimination, inspect intermediate matrices and numerical rank.",
+        "Находите обратную матрицу методом Гаусса — Жордана, изучайте промежуточные матрицы и численный ранг.",
+        "Calculez une matrice inverse par Gauss-Jordan, examinez les matrices intermédiaires et le rang numérique.",
+        "Знаходьте обернену матрицю методом Гауса — Жордана, переглядайте проміжні матриці та чисельний ранг.",
+        "Inverse Matrix mit Gauß-Jordan berechnen, Zwischenmatrizen und numerischen Rang prüfen."
+      ],
+      "A = [[4, 1], [2, 3]] → A⁻¹ = (1/10)[[3, −1], [−2, 4]]"
+    ],
+    [
+      "newton",
+      "newton-method",
+      1,
+      [
+        "Newton's method",
+        "Метод Ньютона",
+        "Méthode de Newton",
+        "Метод Ньютона",
+        "Newton-Verfahren"
+      ],
+      [
+        "Find roots of nonlinear equations with optional derivatives, tangent diagrams and convergence diagnostics.",
+        "Находите корни нелинейных уравнений с заданной или численной производной, касательными и диагностикой сходимости.",
+        "Trouvez les racines d’équations non linéaires avec dérivée facultative, tangentes et diagnostic de convergence.",
+        "Знаходьте корені нелінійних рівнянь із заданою або чисельною похідною, дотичними та діагностикою збіжності.",
+        "Nullstellen nichtlinearer Gleichungen mit optionaler Ableitung, Tangenten und Konvergenzdiagnostik finden."
+      ],
+      "f(x) = x² − 2; x₀ = 1 → x₁ = 1.5 → x₂ ≈ 1.416667 → x ≈ 1.414214"
+    ],
+    [
+      "fixed",
+      "fixed-point-iteration",
+      1,
+      [
+        "Fixed-point iteration",
+        "Метод простых итераций",
+        "Itération du point fixe",
+        "Метод простої ітерації",
+        "Fixpunktiteration"
+      ],
+      [
+        "Solve x = g(x) with successive approximations, cobweb diagrams and local derivative diagnostics.",
+        "Решайте x = g(x) последовательными приближениями с диаграммой Кобвеба и оценкой локальной производной.",
+        "Résolvez x = g(x) par approximations successives, diagrammes en toile d’araignée et dérivée locale.",
+        "Розв’язуйте x = g(x) послідовними наближеннями з діаграмою Кобвеба та оцінкою локальної похідної.",
+        "x = g(x) mit sukzessiven Näherungen, Spinnwebdiagrammen und lokaler Ableitungsdiagnostik lösen."
+      ],
+      "g(x) = cos(x); x₀ = 0.5 → x₁ ≈ 0.877583 → x ≈ 0.739085"
+    ],
+    [
+      "krylov",
+      "krylov-method",
+      2,
+      [
+        "Krylov method (Arnoldi–QR)",
+        "Метод Крылова (Арнольди–QR)",
+        "Méthode de Krylov (Arnoldi–QR)",
+        "Метод Крилова (Арнольді–QR)",
+        "Krylow-Verfahren (Arnoldi–QR)"
+      ],
+      [
+        "Compute characteristic polynomials, real and complex eigenvalues and verified eigenvectors using Krylov subspaces and shifted QR.",
+        "Вычисляйте характеристические полиномы, действительные и комплексные собственные значения и векторы через подпространства Крылова и QR со сдвигом.",
+        "Calculez les polynômes caractéristiques, valeurs propres réelles et complexes et vecteurs propres par sous-espaces de Krylov et QR décalé.",
+        "Обчислюйте характеристичні поліноми, дійсні й комплексні власні значення та вектори через підпростори Крилова й QR зі зсувом.",
+        "Charakteristische Polynome, reelle und komplexe Eigenwerte sowie geprüfte Eigenvektoren mit Krylow-Unterräumen und verschobenem QR berechnen."
+      ],
+      "A = [[4, 1], [2, 3]] → P(λ) = λ² − 7λ + 10 → λ₁ = 2, λ₂ = 5"
+    ],
+    [
+      "lagrange",
+      "lagrange-interpolation",
+      3,
+      [
+        "Lagrange interpolation",
+        "Интерполяция Лагранжа",
+        "Interpolation de Lagrange",
+        "Інтерполяція Лагранжа",
+        "Lagrange-Interpolation"
+      ],
+      [
+        "Study polynomial interpolation with distinct nodes, basis polynomials, step-by-step calculations and extrapolation diagnostics.",
+        "Изучайте полиномиальную интерполяцию по различным узлам, базисные полиномы, ход вычислений и диагностику экстраполяции.",
+        "Étudiez l’interpolation polynomiale, les nœuds distincts, les polynômes de base et le diagnostic d’extrapolation.",
+        "Вивчайте поліноміальну інтерполяцію, різні вузли, базисні поліноми, хід обчислень та діагностику екстраполяції.",
+        "Polynominterpolation mit verschiedenen Knoten, Basispolynomen, Rechenschritten und Extrapolationshinweisen untersuchen."
+      ],
+      "(0, 0), (1, 1), (2, 4) → L(x) = x² → L(1.5) = 2.25"
+    ],
+    [
+      "trap",
+      "trapezoidal-rule",
+      4,
+      [
+        "Trapezoidal rule",
+        "Метод трапеций",
+        "Méthode des trapèzes",
+        "Метод трапецій",
+        "Trapezregel"
+      ],
+      [
+        "Approximate definite integrals with composite trapezoids, grid refinement and Runge error estimates.",
+        "Приближённо вычисляйте определённые интегралы составной формулой трапеций с уточнением сетки и оценкой Рунге.",
+        "Approchez les intégrales définies par trapèzes composites, raffinement de grille et estimation de Runge.",
+        "Наближено обчислюйте визначені інтеграли складеною формулою трапецій з уточненням сітки й оцінкою Рунге.",
+        "Bestimmte Integrale mit zusammengesetzter Trapezregel, Gitterverfeinerung und Runge-Fehlerschätzung annähern."
+      ],
+      "∫₀¹ x² dx; n = 4 → I₄ = 0.34375; I = 1/3"
+    ],
+    [
+      "simpson",
+      "simpsons-rule",
+      4,
+      [
+        "Simpson's rule",
+        "Метод Симпсона",
+        "Méthode de Simpson",
+        "Метод Сімпсона",
+        "Simpsonregel"
+      ],
+      [
+        "Approximate definite integrals with parabolic interpolation, even subintervals, grid refinement and error estimates.",
+        "Вычисляйте определённые интегралы по формуле Симпсона с чётным числом разбиений, уточнением сетки и оценкой погрешности.",
+        "Approchez les intégrales définies par interpolation parabolique, subdivisions paires, raffinement et estimation d’erreur.",
+        "Обчислюйте визначені інтеграли за формулою Сімпсона з парною кількістю підінтервалів, уточненням сітки й оцінкою похибки.",
+        "Bestimmte Integrale mit Parabelinterpolation, gerader Teilintervallzahl, Gitterverfeinerung und Fehlerschätzung annähern."
+      ],
+      "∫₀¹ x² dx; n = 4 → I₄ = 1/3"
+    ],
+    [
+      "sweep",
+      "sweep-method",
+      5,
+      [
+        "Sweep method (Thomas algorithm)",
+        "Метод прогонки (алгоритм Томаса)",
+        "Méthode de Thomas",
+        "Метод прогонки (алгоритм Томаса)",
+        "Thomas-Algorithmus"
+      ],
+      [
+        "Solve linear second-order boundary-value problems with finite differences, Robin conditions and tridiagonal sweep tables.",
+        "Решайте линейные краевые задачи второго порядка конечными разностями с условиями Робина и таблицами прогонки.",
+        "Résolvez des problèmes aux limites linéaires du second ordre par différences finies, conditions de Robin et balayage tridiagonal.",
+        "Розв’язуйте лінійні крайові задачі другого порядку скінченними різницями з умовами Робіна та таблицями прогонки.",
+        "Lineare Randwertprobleme zweiter Ordnung mit finiten Differenzen, Robin-Randbedingungen und tridiagonaler Elimination lösen."
+      ],
+      "y″ = −2; y(0) = y(1) = 0 → y(x) = x(1 − x)"
+    ]
+  ],
+  "labels": {
+    "home": [
+      "Numerical methods",
+      "Численные методы",
+      "Méthodes numériques",
+      "Чисельні методи",
+      "Numerische Methoden"
+    ],
+    "homeDesc": [
+      "Interactive numerical methods calculators with step-by-step solutions, applicability checks and mathematical visualizations.",
+      "Интерактивные калькуляторы численных методов с пошаговыми решениями, проверкой применимости и математической визуализацией.",
+      "Calculateurs de méthodes numériques avec solutions détaillées, vérification des conditions et visualisations mathématiques.",
+      "Інтерактивні калькулятори чисельних методів із покроковими розв’язаннями, перевіркою застосовності та математичними візуалізаціями.",
+      "Interaktive Rechner für numerische Methoden mit Rechenschritten, Anwendbarkeitsprüfung und mathematischen Visualisierungen."
+    ],
+    "titleSuffix": [
+      "calculator with steps",
+      "— калькулятор с решением",
+      "— calculateur avec étapes",
+      "— калькулятор із розв’язанням",
+      "– Rechner mit Lösungsweg"
+    ],
+    "all": [
+      "All methods",
+      "Все методы",
+      "Toutes les méthodes",
+      "Усі методи",
+      "Alle Methoden"
+    ],
+    "example": [
+      "Worked example",
+      "Пример решения",
+      "Exemple résolu",
+      "Приклад розв’язання",
+      "Rechenbeispiel"
+    ],
+    "related": [
+      "Related methods",
+      "Связанные методы",
+      "Méthodes associées",
+      "Пов’язані методи",
+      "Verwandte Methoden"
+    ],
+    "languages": [
+      "Languages",
+      "Языки",
+      "Langues",
+      "Мови",
+      "Sprachen"
+    ],
+    "calculator": [
+      "Calculator",
+      "Калькулятор",
+      "Calculateur",
+      "Калькулятор",
+      "Rechner"
+    ],
+    "noscript": [
+      "Enable JavaScript to use the interactive calculator. Theory and examples are available below.",
+      "Включите JavaScript для интерактивных вычислений. Теория и примеры доступны ниже.",
+      "Activez JavaScript pour utiliser le calculateur. La théorie et les exemples restent disponibles.",
+      "Увімкніть JavaScript для інтерактивних обчислень. Теорія та приклади доступні нижче.",
+      "JavaScript für interaktive Berechnungen aktivieren. Theorie und Beispiele bleiben verfügbar."
+    ],
+    "special": [
+      "Explore the dedicated interactive interpolation tool.",
+      "Открыть отдельный интерактивный инструмент интерполяции.",
+      "Explorer l’outil interactif dédié à l’interpolation.",
+      "Відкрити окремий інтерактивний інструмент інтерполяції.",
+      "Das eigenständige interaktive Interpolationswerkzeug öffnen."
+    ]
+  }
+}
