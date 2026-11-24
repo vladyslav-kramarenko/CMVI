@@ -39,3 +39,5 @@ The site contains 65 static pages (five languages, 12 calculator routes plus a c
 Language navigation preserves current calculator inputs in tab-scoped session storage when available and recomputes unchanged previously solved input. Direct links remain language-specific; there is no forced language redirect.
 
 Numerical robustness: row-scaled determinant with binary exponent tracking; scaled backward errors and relative steps for stationary iterations; inverse residual and condition estimate; barycentric interpolation; independent grid discrepancy for adaptive quadrature; tighter close-eigenvalue handling; discrete boundary/interior residuals for sweep. None of these diagnostics is a universal forward-error certificate. Run `node --test tests/numerical-robustness.test.cjs`.
+
+Additional diagnostics: estimated augmented rank for rank-deficient systems, conditional local fixed-point error indicator and sweep mesh comparison. The rank and error estimates are not symbolic proofs.
