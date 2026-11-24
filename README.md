@@ -41,3 +41,5 @@ Language navigation preserves current calculator inputs in tab-scoped session st
 Numerical robustness: row-scaled determinant with binary exponent tracking; scaled backward errors and relative steps for stationary iterations; inverse residual and condition estimate; barycentric interpolation; independent grid discrepancy for adaptive quadrature; tighter close-eigenvalue handling; discrete boundary/interior residuals for sweep. None of these diagnostics is a universal forward-error certificate. Run `node --test tests/numerical-robustness.test.cjs`.
 
 Additional diagnostics: estimated augmented rank for rank-deficient systems, conditional local fixed-point error indicator and sweep mesh comparison. The rank and error estimates are not symbolic proofs.
+
+Educational pages use native MathML for their principal formulas and report formula headers, with multi-step worked examples and verified reading links. Method comparison uses the same inputs and explicit fixed-point mappings or fixed quadrature grids; each algorithm retains its own convergence status. Comparison is an on-page diagnostic; the single-method report remains independent.

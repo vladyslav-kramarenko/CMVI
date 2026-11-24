@@ -363,6 +363,223 @@
       "Explorer l’outil interactif dédié à l’interpolation.",
       "Відкрити окремий інтерактивний інструмент інтерполяції.",
       "Das eigenständige interaktive Interpolationswerkzeug öffnen."
+    ],
+    "steps": [
+      "Calculation steps",
+      "Шаги вычисления",
+      "Étapes de calcul",
+      "Кроки обчислення",
+      "Rechenschritte"
+    ],
+    "pitfalls": [
+      "Accuracy and common pitfalls",
+      "Точность и типичные ошибки",
+      "Précision et erreurs fréquentes",
+      "Точність і типові помилки",
+      "Genauigkeit und typische Fehler"
+    ],
+    "references": [
+      "Recommended reading",
+      "Рекомендуемая литература",
+      "Lectures recommandées",
+      "Рекомендована література",
+      "Weiterführende Literatur"
+    ],
+    "implementation": [
+      "Implementation note",
+      "Особенность реализации",
+      "Note d’implémentation",
+      "Особливість реалізації",
+      "Implementierungshinweis"
     ]
-  }
+  },
+  "formulas": {
+    "gauss": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mo>[</mo><mi>A</mi><mo>|</mo><mi>b</mi><mo>]</mo><mo>→</mo><mo>[</mo><mi>I</mi><mo>|</mo><mi>x</mi><mo>]</mo></mrow></math>",
+    "jacobi": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msup><msub><mi>x</mi><mi>i</mi></msub><mrow><mo>(</mo><mi>k</mi><mo>+</mo><mn>1</mn><mo>)</mo></mrow></msup><mo>=</mo><mfrac><mrow><msub><mi>b</mi><mi>i</mi></msub><mo>−</mo><msub><mo>∑</mo><mrow><mi>j</mi><mo>≠</mo><mi>i</mi></mrow></msub><msub><mi>a</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msup><msub><mi>x</mi><mi>j</mi></msub><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></msup></mrow><msub><mi>a</mi><mrow><mi>i</mi><mi>i</mi></mrow></msub></mfrac></mrow></math>",
+    "seidel": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msup><msub><mi>x</mi><mi>i</mi></msub><mrow><mo>(</mo><mi>k</mi><mo>+</mo><mn>1</mn><mo>)</mo></mrow></msup><mo>=</mo><mfrac><mrow><msub><mi>b</mi><mi>i</mi></msub><mo>−</mo><msub><mo>∑</mo><mrow><mi>j</mi><mo>&lt;</mo><mi>i</mi></mrow></msub><msub><mi>a</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msup><msub><mi>x</mi><mi>j</mi></msub><mrow><mo>(</mo><mi>k</mi><mo>+</mo><mn>1</mn><mo>)</mo></mrow></msup><mo>−</mo><msub><mo>∑</mo><mrow><mi>j</mi><mo>&gt;</mo><mi>i</mi></mrow></msub><msub><mi>a</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msup><msub><mi>x</mi><mi>j</mi></msub><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></msup></mrow><msub><mi>a</mi><mrow><mi>i</mi><mi>i</mi></mrow></msub></mfrac></mrow></math>",
+    "det": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mrow><mi>det</mi><mo>(</mo><mi>A</mi><mo>)</mo></mrow><mo>=</mo><msup><mrow><mo>(</mo><mo>−</mo><mn>1</mn><mo>)</mo></mrow><mi>s</mi></msup><msub><mo>∏</mo><mi>i</mi></msub><msub><mi>p</mi><mi>i</mi></msub></mrow></math>",
+    "inverse": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mo>[</mo><mi>A</mi><mo>|</mo><mi>I</mi><mo>]</mo><mo>→</mo><mo>[</mo><mi>I</mi><mo>|</mo><msup><mi>A</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>]</mo></mrow></math>",
+    "newton": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>x</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><msub><mi>x</mi><mi>k</mi></msub><mo>−</mo><mfrac><mrow><mi>f</mi><mo>(</mo><msub><mi>x</mi><mi>k</mi></msub><mo>)</mo></mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>(</mo><msub><mi>x</mi><mi>k</mi></msub><mo>)</mo></mrow></mfrac></mrow></math>",
+    "fixed": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>x</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mrow><mi>g</mi><mo>(</mo><msub><mi>x</mi><mi>k</mi></msub><mo>)</mo></mrow></mrow></math>",
+    "krylov": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>K</mi><mi>m</mi></msub><mo>(</mo><mi>A</mi><mo>,</mo><mi>v</mi><mo>)</mo><mo>=</mo><mi>span</mi><mo>(</mo><mi>v</mi><mo>,</mo><mi>A</mi><mi>v</mi><mo>,</mo><mo>…</mo><mo>,</mo><msup><mi>A</mi><mrow><mi>m</mi><mo>−</mo><mn>1</mn></mrow></msup><mi>v</mi><mo>)</mo></mrow></math>",
+    "lagrange": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mrow><mi>L</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msub><mo>∑</mo><mi>i</mi></msub><msub><mi>y</mi><mi>i</mi></msub><msub><mo>∏</mo><mrow><mi>j</mi><mo>≠</mo><mi>i</mi></mrow></msub><mfrac><mrow><mi>x</mi><mo>−</mo><msub><mi>x</mi><mi>j</mi></msub></mrow><mrow><msub><mi>x</mi><mi>i</mi></msub><mo>−</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac></mrow></math>",
+    "trap": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>I</mi><mi>n</mi></msub><mo>=</mo><mi>h</mi><mo>[</mo><mfrac><mrow><mi>f</mi><mo>(</mo><mi>a</mi><mo>)</mo></mrow><mn>2</mn></mfrac><mo>+</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></munderover><mrow><mi>f</mi><mo>(</mo><mrow><mi>a</mi><mo>+</mo><mi>i</mi><mi>h</mi></mrow><mo>)</mo></mrow><mo>+</mo><mfrac><mrow><mi>f</mi><mo>(</mo><mi>b</mi><mo>)</mo></mrow><mn>2</mn></mfrac><mo>]</mo></mrow></math>",
+    "simpson": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>I</mi><mi>n</mi></msub><mo>=</mo><mfrac><mi>h</mi><mn>3</mn></mfrac><mo>[</mo><mrow><mi>f</mi><mo>(</mo><msub><mi>x</mi><mn>0</mn></msub><mo>)</mo></mrow><mo>+</mo><mn>4</mn><mrow><mi>f</mi><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>)</mo></mrow><mo>+</mo><mn>2</mn><mrow><mi>f</mi><mo>(</mo><msub><mi>x</mi><mn>2</mn></msub><mo>)</mo></mrow><mo>+</mo><mo>…</mo><mo>+</mo><mrow><mi>f</mi><mo>(</mo><msub><mi>x</mi><mi>n</mi></msub><mo>)</mo></mrow><mo>]</mo></mrow></math>",
+    "sweep": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>l</mi><mi>i</mi></msub><msub><mi>y</mi><mrow><mi>i</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>+</mo><msub><mi>d</mi><mi>i</mi></msub><msub><mi>y</mi><mi>i</mi></msub><mo>+</mo><msub><mi>u</mi><mi>i</mi></msub><msub><mi>y</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><msub><mi>r</mi><mi>i</mi></msub></mrow></math>"
+  },
+  "examples": {
+    "gauss": [
+      "[4, 1 | 6; 2, 3 | 8] → R₂ − ½R₁ → [4, 1 | 6; 0, 2.5 | 5]",
+      "R₂ / 2.5 → [0, 1 | 2]",
+      "R₁ − R₂ → [4, 0 | 4] → R₁ / 4 → [1, 0 | 1]",
+      "Ax − b = (0, 0)"
+    ],
+    "jacobi": [
+      "x₁⁽ᵏ⁺¹⁾ = (6 − x₂⁽ᵏ⁾)/4; x₂⁽ᵏ⁺¹⁾ = (8 − 2x₁⁽ᵏ⁾)/3",
+      "x⁽⁰⁾ = (0, 0) → x⁽¹⁾ = (1.5, 8/3)",
+      "x⁽²⁾ = (5/6, 5/3) → x⁽³⁾ = (13/12, 19/9)",
+      "|4| > |1|; |3| > |2|; x⁽ᵏ⁾ → (1, 2)"
+    ],
+    "seidel": [
+      "x₁⁽ᵏ⁺¹⁾ = (6 − x₂⁽ᵏ⁾)/4; x₂⁽ᵏ⁺¹⁾ = (8 − 2x₁⁽ᵏ⁺¹⁾)/3",
+      "x⁽⁰⁾ = (0, 0) → x⁽¹⁾ = (1.5, 5/3)",
+      "x⁽²⁾ = (13/12, 35/18)",
+      "|4| > |1|; |3| > |2|; x⁽ᵏ⁾ → (1, 2)"
+    ],
+    "det": [
+      "A = [[4, 1], [2, 3]]",
+      "R₂ ← R₂ − ½R₁ → [[4, 1], [0, 2.5]]",
+      "det(A) = 4 · 2.5 = 10"
+    ],
+    "inverse": [
+      "[A | I] = [4, 1 | 1, 0; 2, 3 | 0, 1]",
+      "R₂ ← R₂ − ½R₁ → [0, 2.5 | −0.5, 1]",
+      "R₂ / 2.5; R₁ ← (R₁ − R₂)/4",
+      "[I | A⁻¹] = [1, 0 | 0.3, −0.1; 0, 1 | −0.2, 0.4]",
+      "AA⁻¹ = I"
+    ],
+    "newton": [
+      "f′(x) = 2x; xₖ₊₁ = (xₖ + 2/xₖ)/2",
+      "x₀ = 1 → x₁ = 1.5 → x₂ = 17/12",
+      "x₃ = 577/408 ≈ 1.414215686",
+      "x ≈ 1.41421356237; |x² − 2| ≈ 0"
+    ],
+    "fixed": [
+      "xₖ₊₁ = cos(xₖ), x₀ = 0.5",
+      "x₁ ≈ 0.877583; x₂ ≈ 0.639012; x₃ ≈ 0.802685",
+      "g([0, 1]) ⊂ [0, 1]; |g′(x)| ≤ sin(1) < 1",
+      "x ≈ 0.7390851332"
+    ],
+    "krylov": [
+      "v = (1, 0)ᵀ; Av = (4, 2)ᵀ; A²v = (18, 14)ᵀ",
+      "A²v − 7Av + 10v = (0, 0)ᵀ",
+      "P(λ) = λ² − 7λ + 10 = (λ − 2)(λ − 5)",
+      "λ = 2: v = (−1, 2)ᵀ; λ = 5: v = (1, 1)ᵀ",
+      "Av = λv"
+    ],
+    "lagrange": [
+      "ℓ₀(x) = (x − 1)(x − 2)/2; ℓ₁(x) = −x(x − 2); ℓ₂(x) = x(x − 1)/2",
+      "L(x) = 0·ℓ₀(x) + ℓ₁(x) + 4ℓ₂(x)",
+      "L(x) = −x(x − 2) + 2x(x − 1) = x²",
+      "L(1.5) = 2.25"
+    ],
+    "trap": [
+      "h = 1/4; f(0) = 0; f(1/4) = 1/16; f(1/2) = 1/4; f(3/4) = 9/16; f(1) = 1",
+      "I₄ = (1/4)(0 + 1/16 + 1/4 + 9/16 + 1/2) = 11/32",
+      "I₈ = 43/128; |I₈ − I₄|/3 = 1/384",
+      "|I₄ − 1/3| = 1/96"
+    ],
+    "simpson": [
+      "h = 1/4; f(x) = x²",
+      "I₄ = (1/12)[0 + 4(1/16) + 2(1/4) + 4(9/16) + 1]",
+      "I₄ = (1/12) · 4 = 1/3",
+      "I₈ = I₄; |I₈ − I₄|/15 = 0"
+    ],
+    "sweep": [
+      "n = 2; h = 1/2; y₀ = y₂ = 0",
+      "4y₀ − 8y₁ + 4y₂ = −2",
+      "y₁ = 1/4; (y₀, y₁, y₂) = (0, 1/4, 0)",
+      "y(x) = x(1 − x); y″ = −2"
+    ]
+  },
+  "pitfalls": {
+    "gauss": [
+      "A small residual does not guarantee an accurate solution when the matrix is ill-conditioned; compare the backward error and condition estimate.",
+      "Малая невязка не гарантирует точное решение при плохой обусловленности; сравнивайте обратную погрешность и число обусловленности.",
+      "Un petit résidu ne garantit pas une solution précise si la matrice est mal conditionnée ; examinez l’erreur rétrograde et le conditionnement.",
+      "Мала нев’язка не гарантує точності за поганої обумовленості; порівнюйте зворотну похибку та число обумовленості.",
+      "Ein kleines Residuum garantiert bei schlechter Kondition keine genaue Lösung; Rückwärtsfehler und Konditionszahl prüfen."
+    ],
+    "jacobi": [
+      "Simultaneous updates use only the previous iterate. Relative residual and relative step are stopping diagnostics, not forward-error guarantees.",
+      "Одновременное обновление использует только предыдущее приближение. Относительная невязка и шаг — критерии остановки, а не гарантия точности.",
+      "Les mises à jour simultanées utilisent uniquement l’itération précédente. Résidu et pas relatifs ne garantissent pas l’erreur directe.",
+      "Одночасне оновлення використовує лише попереднє наближення. Відносна нев’язка й крок не гарантують прямої похибки.",
+      "Simultane Updates verwenden nur den vorherigen Iterierten. Relatives Residuum und Schritt sind keine Vorwärtsfehlergarantie."
+    ],
+    "seidel": [
+      "Use newly computed components immediately. Changing the equation order can change convergence behavior.",
+      "Новые компоненты используются сразу. Перестановка уравнений может изменить сходимость.",
+      "Utilisez immédiatement les nouvelles composantes. L’ordre des équations peut modifier la convergence.",
+      "Нові компоненти використовуються одразу. Перестановка рівнянь може змінити збіжність.",
+      "Neue Komponenten sofort verwenden. Die Gleichungsreihenfolge kann die Konvergenz verändern."
+    ],
+    "det": [
+      "A tiny determinant is not the same as zero. The scaled calculation preserves representable small values; numerical rank remains a separate diagnosis.",
+      "Малый определитель не равен нулю. Масштабирование сохраняет представимые малые значения; численный ранг проверяется отдельно.",
+      "Un petit déterminant n’est pas nul. La mise à l’échelle préserve les petites valeurs représentables ; le rang est diagnostiqué séparément.",
+      "Малий визначник не дорівнює нулю. Масштабування зберігає представні малі значення; ранг перевіряється окремо.",
+      "Eine kleine Determinante ist nicht null. Skalierung erhält darstellbare kleine Werte; der Rang wird separat geprüft."
+    ],
+    "inverse": [
+      "Check AA⁻¹ − I and conditioning. A small verification residual alone does not certify forward accuracy.",
+      "Проверяйте AA⁻¹ − I и обусловленность. Малая невязка проверки сама по себе не гарантирует прямую точность.",
+      "Vérifiez AA⁻¹ − I et le conditionnement. Un petit résidu seul ne certifie pas la précision directe.",
+      "Перевіряйте AA⁻¹ − I та обумовленість. Мала нев’язка сама по собі не гарантує прямої точності.",
+      "AA⁻¹ − I und Kondition prüfen. Ein kleines Prüfresiduum allein garantiert keine Vorwärtsgenauigkeit."
+    ],
+    "newton": [
+      "A poor starting point, multiple root or near-zero derivative may slow or prevent convergence. The local linearized error is only an indicator.",
+      "Неудачное начальное приближение, кратный корень или почти нулевая производная могут замедлить или нарушить сходимость. Локальная оценка ошибки лишь ориентир.",
+      "Un mauvais point initial, une racine multiple ou une dérivée presque nulle peut freiner ou empêcher la convergence. L’erreur locale est indicative.",
+      "Невдале початкове наближення, кратний корінь або майже нульова похідна можуть завадити збіжності. Локальна оцінка лише орієнтир.",
+      "Schlechter Startwert, mehrfache Nullstelle oder fast verschwindende Ableitung können Konvergenz verhindern. Lokaler Fehler ist nur ein Indikator."
+    ],
+    "fixed": [
+      "A rigorous error bound needs a known uniform contraction constant q < 1 on an invariant interval. A derivative at one point is not enough.",
+      "Строгая граница ошибки требует известной равномерной константы сжатия q < 1 на инвариантном интервале. Производной в одной точке недостаточно.",
+      "Une borne rigoureuse exige une constante uniforme q < 1 sur un intervalle invariant. Une dérivée ponctuelle ne suffit pas.",
+      "Строга межа похибки потребує відомої рівномірної константи стиску q < 1 на інваріантному інтервалі. Однієї похідної недостатньо.",
+      "Eine strenge Fehlerschranke erfordert eine uniforme Kontraktionskonstante q < 1 auf einem invarianten Intervall. Eine punktuelle Ableitung reicht nicht."
+    ],
+    "krylov": [
+      "The worked example uses the classical cyclic Krylov relation. The calculator instead builds an orthonormal Krylov basis and applies QR; close eigenvalues remain sensitive.",
+      "Пример использует классическое циклическое соотношение Крылова. Калькулятор строит ортонормированный базис и применяет QR; близкие значения чувствительны к округлению.",
+      "L’exemple utilise la relation cyclique classique de Krylov. Le calculateur construit une base orthonormée et applique QR ; les valeurs proches restent sensibles.",
+      "Приклад використовує класичне циклічне співвідношення Крилова. Калькулятор будує ортонормований базис і застосовує QR; близькі значення чутливі.",
+      "Das Beispiel nutzt die klassische zyklische Krylow-Relation. Der Rechner bildet eine orthonormale Basis und nutzt QR; nahe Eigenwerte bleiben empfindlich."
+    ],
+    "lagrange": [
+      "Barycentric evaluation is preferable to expanded coefficients, especially for large or close nodes. It does not eliminate high-degree oscillations or unreliable extrapolation.",
+      "Барицентрическая форма предпочтительнее развёрнутых коэффициентов, особенно для больших или близких узлов. Она не устраняет осцилляции высокой степени и ненадёжную экстраполяцию.",
+      "La forme barycentrique est préférable aux coefficients développés, surtout pour des nœuds grands ou proches. Elle n’élimine ni les oscillations ni l’extrapolation incertaine.",
+      "Барицентрична форма краща за розгорнуті коефіцієнти, особливо для великих чи близьких вузлів. Вона не усуває осциляцій та ненадійної екстраполяції.",
+      "Baryzentrische Auswertung ist bei großen oder nahen Knoten vorzuziehen. Sie beseitigt weder Oszillationen noch unsichere Extrapolation."
+    ],
+    "trap": [
+      "For f ∈ C²[a,b], the composite rule has an error bound (b−a)h² max|f″|/12. Runge estimates and independent grids do not prove this derivative bound.",
+      "Для f ∈ C²[a,b] граница погрешности составной формулы — (b−a)h² max|f″|/12. Оценка Рунге и независимые сетки не доказывают границу производной.",
+      "Pour f ∈ C²[a,b], une borne est (b−a)h² max|f″|/12. Runge et grilles indépendantes ne prouvent pas cette borne de dérivée.",
+      "Для f ∈ C²[a,b] межа похибки — (b−a)h² max|f″|/12. Оцінка Рунге й незалежні сітки не доводять межу похідної.",
+      "Für f ∈ C²[a,b] gilt die Schranke (b−a)h² max|f″|/12. Runge und unabhängige Gitter beweisen die Ableitungsschranke nicht."
+    ],
+    "simpson": [
+      "For f ∈ C⁴[a,b] and even n, the error is bounded by (b−a)h⁴ max|f⁽⁴⁾|/180. Cubic polynomials are integrated exactly in exact arithmetic.",
+      "Для f ∈ C⁴[a,b] и чётного n погрешность ограничена (b−a)h⁴ max|f⁽⁴⁾|/180. Кубические полиномы интегрируются точно в точной арифметике.",
+      "Pour f ∈ C⁴[a,b] et n pair, l’erreur est bornée par (b−a)h⁴ max|f⁽⁴⁾|/180. Les polynômes cubiques sont intégrés exactement en arithmétique exacte.",
+      "Для f ∈ C⁴[a,b] та парного n похибка обмежена (b−a)h⁴ max|f⁽⁴⁾|/180. Кубічні поліноми інтегруються точно в точній арифметиці.",
+      "Für f ∈ C⁴[a,b] und gerades n gilt (b−a)h⁴ max|f⁽⁴⁾|/180. Kubische Polynome werden in exakter Arithmetik exakt integriert."
+    ],
+    "sweep": [
+      "A zero sweep pivot can occur even for a solvable boundary-value problem. Discrete residuals and mesh differences measure different aspects of accuracy.",
+      "Нулевой ведущий элемент прогонки возможен даже у разрешимой краевой задачи. Дискретная невязка и разность сеток измеряют разные аспекты точности.",
+      "Un pivot nul peut apparaître même pour un problème aux limites résoluble. Résidus discrets et différences de maillage mesurent des aspects différents.",
+      "Нульовий провідний елемент можливий навіть у розв’язній крайовій задачі. Дискретні нев’язки та різниці сіток вимірюють різні аспекти точності.",
+      "Ein Nullpivot kann auch bei lösbaren Randwertproblemen auftreten. Diskrete Residuen und Gitterdifferenzen messen verschiedene Genauigkeitsaspekte."
+    ]
+  },
+  "references": [
+    [
+      "T. A. Driscoll, R. J. Braun — Fundamentals of Numerical Computation",
+      "https://tobydriscoll.net/book/fnc/index.html"
+    ],
+    [
+      "R. L. Burden, J. D. Faires, A. M. Burden — Numerical Analysis, 10th ed. (2016)",
+      "https://www.cengage.com/c/numerical-analysis-10e-faires/9781305253667"
+    ],
+    [
+      "L. N. Trefethen, D. Bau III — Numerical Linear Algebra (1997)",
+      "https://people.maths.ox.ac.uk/trefethen/text.html"
+    ]
+  ]
 }
