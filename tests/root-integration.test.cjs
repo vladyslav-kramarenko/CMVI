@@ -1,0 +1,16 @@
+const {test}=require("node:test");const fs=require("node:fs"),vm=require("node:vm");const src=fs.readFileSync(require("node:path").join(__dirname,"../web/app.js"),"utf8");const ctx=vm.createContext({});vm.runInContext(src.slice(0,src.indexOf("(function ui()"))+"\nthis.E=engine();",ctx);const {root,integrate}=ctx.E;const assert=(x,m)=>{if(!x)throw Error(m)};
+test("Newton sqrt2",()=>{let r=root(x=>x*x-2,1,1e-10,100,"newton");assert(r.status==="Converged"&&Math.abs(r.x-Math.SQRT2)<1e-9,"sqrt");});
+test("Newton false residual",()=>{let r=root(x=>x**10,.1,1e-8,2,"newton");assert(r.status!=="Converged"&&r.iterations===2,"false residual");});
+test("Newton supplied derivative",()=>{let r=root(x=>x*x-2,1,1e-10,100,"newton",x=>2*x);assert(r.status==="Converged"&&Math.abs(r.x-Math.SQRT2)<1e-9,"derivative");});
+test("Newton derivative zero",()=>assert(root(x=>x*x+1,0,1e-8,100,"newton",x=>2*x).status==="Derivative is zero or undefined","zero derivative"));
+test("Fixed point cosine",()=>{let r=root(Math.cos,.5,1e-10,100,"fixed");assert(r.status==="Converged"&&Math.abs(r.x-.7390851332)<1e-9&&r.localSlope<1,"cos");});
+test("Fixed point divergent",()=>assert(root(x=>2*x,1,1e-8,20,"fixed").status!=="Converged","divergent"));
+test("Trapezoid fixed",()=>{let r=integrate(x=>x*x,0,1,4,"trap");assert(Math.abs(r.value-.34375)<1e-12&&Math.abs(r.estimatedError-1/96)<1e-12,"trap");});
+test("Simpson cubic",()=>{let r=integrate(x=>x**3,0,1,4,"simpson");assert(Math.abs(r.value-.25)<1e-12,"simpson");});
+test("Trapezoid adaptive",()=>{let r=integrate(Math.sin,0,Math.PI,4,"trap",1e-7);assert(r.status==="Estimated tolerance reached"&&Math.abs(r.value-2)<1.01e-7,"adaptive trap");});
+test("Simpson adaptive",()=>{let r=integrate(Math.exp,0,1,2,"simpson",1e-10);assert(r.status==="Estimated tolerance reached"&&Math.abs(r.value-Math.expm1(1))<1.01e-10,"adaptive simpson");});
+test("Reverse bounds",()=>assert(Math.abs(integrate(x=>x*x,1,0,4,"simpson").value+1/3)<1e-12,"reverse"));
+test("Zero width",()=>assert(integrate(()=>NaN,1,1,4,"simpson").value===0,"zero width"));
+test("Odd Simpson",()=>{let ok=false;try{integrate(x=>x,0,1,3,"simpson")}catch{ok=true}assert(ok,"odd") });
+test("Undefined integrand",()=>{let ok=false;try{integrate(x=>1/x,0,1,4,"trap")}catch{ok=true}assert(ok,"domain")});
+test("Refinement limit",()=>assert(integrate(x=>x*x,0,1,100000,"trap",1e-20).status==="Refinement limit reached","cap"));
