@@ -1,0 +1,18 @@
+const {test}=require("node:test"),assert=require("node:assert/strict"),fs=require("node:fs"),vm=require("node:vm");const src=fs.readFileSync(require("node:path").join(__dirname,"../web/app.js"),"utf8");const ctx=vm.createContext({});vm.runInContext(src.slice(0,src.indexOf("(function ui()"))+"\nthis.E=engine();",ctx);const E=ctx.E;
+test("small determinant",()=>assert.ok((E=>Math.abs(E.determinant([[1,0],[0,1e-16]]).determinant/1e-16-1)<1e-14)(E)));
+test("mixed determinant scales",()=>assert.ok((E=>Math.abs(E.determinant([[1e308,0],[0,1e-308]]).determinant-1)<1e-14)(E)));
+test("singular determinant",()=>assert.ok((E=>E.determinant([[1,2],[2,4]]).determinant===0)(E)));
+test("determinant underflow",()=>assert.ok((E=>!!E.determinant([[1e-200,0],[0,1e-200]]).determinantScientific)(E)));
+test("Jacobi scale invariance",()=>assert.ok((E=>{let r=E.linear([[2e-12,1e-12],[1e-12,2e-12]],[3e-12,3e-12],"jacobi",1e-8,100);return r.status==="Converged"&&Math.abs(r.x[0]-1)<1e-7&&r.iterations>1})(E)));
+test("Seidel scale invariance",()=>assert.ok((E=>{let r=E.linear([[2e-12,1e-12],[1e-12,2e-12]],[3e-12,3e-12],"seidel",1e-8,100);return r.status==="Converged"&&Math.abs(r.x[0]-1)<1e-7})(E)));
+test("inverse diagnostics",()=>assert.ok((E=>{let r=E.inverse([[4,1],[2,3]]);return r.inverseResidual<1e-12&&Math.abs(r.conditionEstimate-3)<1e-12})(E)));
+test("inverse overflow rejected",()=>assert.ok((E=>{try{E.inverse([[1e-320]]);return false}catch{return true}})(E)));
+test("barycentric polynomial",()=>assert.ok((E=>Math.abs(E.lagrange([0,1,2],[0,1,4])(1.5)-2.25)<1e-12)(E)));
+test("barycentric large nodes",()=>assert.ok((E=>Math.abs(E.lagrange([0,1e200,2e200],[0,1,4])(1.5e200)-2.25)<1e-10)(E)));
+test("close eigenvalues",()=>assert.ok((E=>{let r=E.krylov([[1,0],[0,1+1e-12]]);return r.eigenpairs.length===2&&r.eigenpairs[0].lambda!==r.eigenpairs[1].lambda&&r.eigenpairs.every(p=>p.vectors.length===1)})(E)));
+test("repeated eigenvalues",()=>assert.ok((E=>E.krylov([[2,0],[0,2]]).eigenpairs[0].vectors.length===2)(E)));
+test("oscillatory trapezoid",()=>assert.ok((E=>{let r=E.integrate(x=>Math.cos(128*Math.PI*x),0,1,4,"trap",1e-6);return Math.abs(r.value)<1e-6||r.status!=="Estimated tolerance reached"})(E)));
+test("oscillatory Simpson",()=>assert.ok((E=>{let r=E.integrate(x=>Math.cos(128*Math.PI*x),0,1,4,"simpson",1e-6);return Math.abs(r.value)<1e-6||r.status!=="Estimated tolerance reached"})(E)));
+test("sweep residual",()=>assert.ok((E=>{let r=E.sweep(()=>0,()=>0,()=>-2,0,1,20,[0,1],[0,1],0,0);return r.interiorResidual<1e-10&&r.leftResidual<1e-12&&r.rightResidual<1e-12})(E)));
+test("sweep zero pivot explained",()=>assert.ok((E=>{try{E.sweep(()=>0,()=>0,()=>0,0,1,2,[1,2],[0,1],1,0);return false}catch(e){return e.message.includes("does not establish")}})(E)));
+test("Newton indicator",()=>assert.ok((E=>E.root(x=>x*x-2,1,1e-8,100,"newton").localErrorEstimate<1e-8)(E)));
