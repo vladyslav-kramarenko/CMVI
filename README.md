@@ -29,3 +29,5 @@ Run the Krylov numerical regression suite: `node --test tests/krylov.test.cjs`.
 Root and quadrature regression tests: `node --test tests/root-integration.test.cjs`.
 
 All 12 methods include theory and data-dependent applicability diagnostics. Sufficient convergence conditions, numerical diagnostics, and hard requirements are distinguished. Sampling cannot certify smoothness or absence of singularities. Run `node --test tests/applicability.test.cjs` for the diagnostic regression suite.
+
+Method visualization: matrix transformation playback, 2D linear-system geometry, determinant/inverse area transformations, iteration residuals and trajectories, Lagrange basis curves, quadrature refinement, finite-difference mesh and sweep pivots, and complex eigenvalue plots. Visuals use actual calculation data and are included in HTML/print reports; higher-dimensional systems use matrix/iteration views. Run `node --test tests/visualization.test.cjs`.
