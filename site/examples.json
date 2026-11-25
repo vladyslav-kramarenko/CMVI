@@ -1,0 +1,1497 @@
+{
+  "labels": {
+    "exampleBank": [
+      "Worked examples",
+      "Решённые примеры",
+      "Exemples résolus",
+      "Розв’язані приклади",
+      "Rechenbeispiele"
+    ],
+    "basic": [
+      "Basic",
+      "Базовый",
+      "Débutant",
+      "Базовий",
+      "Grundlagen"
+    ],
+    "academic": [
+      "Academic",
+      "Академический",
+      "Universitaire",
+      "Академічний",
+      "Hochschule"
+    ],
+    "advanced": [
+      "Advanced",
+      "Продвинутый",
+      "Avancé",
+      "Поглиблений",
+      "Fortgeschritten"
+    ],
+    "chooseExample": [
+      "Choose an example",
+      "Выберите пример",
+      "Choisir un exemple",
+      "Виберіть приклад",
+      "Beispiel wählen"
+    ],
+    "loadExample": [
+      "Load example",
+      "Загрузить пример",
+      "Charger l’exemple",
+      "Завантажити приклад",
+      "Beispiel laden"
+    ],
+    "expected": [
+      "Expected result",
+      "Эталонный результат",
+      "Résultat attendu",
+      "Еталонний результат",
+      "Erwartetes Ergebnis"
+    ],
+    "exampleHelp": [
+      "Load the problem, then select Solve to view the steps. Some advanced examples intentionally fail or do not converge.",
+      "Загрузите задачу и нажмите «Решить», чтобы увидеть шаги. Некоторые продвинутые примеры намеренно не решаются этим методом или не сходятся.",
+      "Chargez le problème, puis lancez le calcul. Certains exemples avancés échouent ou divergent volontairement.",
+      "Завантажте задачу й натисніть «Розв’язати», щоб побачити кроки. Деякі поглиблені приклади навмисно не розв’язуються цим методом або розбігаються.",
+      "Beispiel laden und berechnen, um die Schritte zu sehen. Einige fortgeschrittene Beispiele scheitern oder divergieren absichtlich."
+    ],
+    "source": [
+      "Source",
+      "Источник",
+      "Source",
+      "Джерело",
+      "Quelle"
+    ],
+    "custom": [
+      "Original exercise",
+      "Авторская задача",
+      "Exercice original",
+      "Авторська задача",
+      "Eigene Aufgabe"
+    ],
+    "loaded": [
+      "Example loaded. Select Solve.",
+      "Пример загружен. Нажмите «Решить».",
+      "Exemple chargé. Lancez le calcul.",
+      "Приклад завантажено. Натисніть «Розв’язати».",
+      "Beispiel geladen. Jetzt berechnen."
+    ]
+  },
+  "notes": {
+    "rounding": [
+      "Source values are rounded; compare to the stated tolerance.",
+      "В источнике значения округлены; сравнивайте с указанным допуском.",
+      "Les valeurs sources sont arrondies ; respecter la tolérance.",
+      "Значення джерела округлено; порівнюйте з указаним допуском.",
+      "Quellwerte sind gerundet; angegebene Toleranz beachten."
+    ],
+    "krylov": [
+      "The source uses the characteristic equation. CMVI uses Arnoldi–QR and the monic polynomial det(λI − A).",
+      "Источник использует характеристическое уравнение. CMVI применяет Арнольди–QR и полином det(λI − A).",
+      "La source utilise l’équation caractéristique ; CMVI utilise Arnoldi–QR et det(λI − A).",
+      "Джерело використовує характеристичне рівняння; CMVI застосовує Арнольді–QR і det(λI − A).",
+      "Die Quelle nutzt die charakteristische Gleichung; CMVI nutzt Arnoldi–QR und det(λI − A)."
+    ],
+    "delft": [
+      "The problem is from TU Delft; reference node values were independently computed for this discretization.",
+      "Задача из TU Delft; эталонные значения узлов независимо вычислены для этой дискретизации.",
+      "Problème de TU Delft ; valeurs nodales de référence calculées indépendamment.",
+      "Задача з TU Delft; еталонні вузлові значення незалежно обчислені для цієї дискретизації.",
+      "Aufgabe der TU Delft; Referenzknotenwerte unabhängig für diese Diskretisierung berechnet."
+    ],
+    "inconsistent": [
+      "Expected: no unique solution; applicability checks should reject this inconsistent system.",
+      "Ожидается отказ: система несовместна, единственного решения нет.",
+      "Rejet attendu : système incompatible, aucune solution unique.",
+      "Очікується відмова: система несумісна, єдиного розв’язку немає.",
+      "Erwartete Ablehnung: inkonsistentes System, keine eindeutige Lösung."
+    ],
+    "scaled": [
+      "Absolute residual alone can give false convergence; relative diagnostics avoid that in this example.",
+      "Абсолютная невязка может дать ложную сходимость; здесь помогают относительные критерии.",
+      "Le résidu absolu seul peut indiquer une fausse convergence ; les critères relatifs l’évitent ici.",
+      "Абсолютна нев’язка може дати хибну збіжність; тут допомагають відносні критерії.",
+      "Absolutes Residuum allein kann falsche Konvergenz melden; relative Kriterien vermeiden dies hier."
+    ],
+    "divergent": [
+      "Expected: iteration limit, not convergence.",
+      "Ожидается достижение лимита, а не сходимость.",
+      "Limite d’itérations attendue, pas de convergence.",
+      "Очікується досягнення ліміту, а не збіжність.",
+      "Iterationslimit erwartet, keine Konvergenz."
+    ],
+    "smallDet": [
+      "A small determinant need not be zero.",
+      "Малый определитель не обязательно равен нулю.",
+      "Un petit déterminant n’est pas nécessairement nul.",
+      "Малий визначник не обов’язково нульовий.",
+      "Eine kleine Determinante muss nicht null sein."
+    ],
+    "illConditioned": [
+      "An inverse can exist despite severe ill-conditioning.",
+      "Обратная матрица может существовать даже при плохой обусловленности.",
+      "Une inverse peut exister malgré un mauvais conditionnement.",
+      "Обернена матриця може існувати попри погану обумовленість.",
+      "Eine Inverse kann trotz schlechter Kondition existieren."
+    ],
+    "zeroDerivative": [
+      "Expected: derivative is zero; a Newton step is unavailable.",
+      "Ожидается остановка: производная нулевая, шаг Ньютона невозможен.",
+      "Arrêt attendu : dérivée nulle, pas de Newton impossible.",
+      "Очікується зупинка: похідна нульова, крок Ньютона неможливий.",
+      "Erwarteter Abbruch: Ableitung null, Newton-Schritt unmöglich."
+    ],
+    "cycling": [
+      "Expected: a two-cycle, not convergence.",
+      "Ожидается цикл длины два, а не сходимость.",
+      "Cycle de période deux attendu, pas de convergence.",
+      "Очікується цикл довжини два, а не збіжність.",
+      "Zweierzyklus erwartet, keine Konvergenz."
+    ],
+    "closeEigen": [
+      "Distinct eigenvalues must not be merged merely due to rounding.",
+      "Различные собственные значения нельзя объединять только из-за округления.",
+      "Ne pas fusionner des valeurs propres distinctes par simple arrondi.",
+      "Різні власні значення не можна об’єднувати лише через округлення.",
+      "Verschiedene Eigenwerte nicht allein wegen Rundung zusammenfassen."
+    ],
+    "extrapolate": [
+      "The value is outside the node interval; extrapolation is not generally reliable.",
+      "Точка вне интервала узлов; экстраполяция не всегда надёжна.",
+      "Point hors de l’intervalle des nœuds ; extrapolation non garantie.",
+      "Точка поза інтервалом вузлів; екстраполяція не завжди надійна.",
+      "Punkt außerhalb des Knotenintervalls; Extrapolation nicht allgemein zuverlässig."
+    ],
+    "alias": [
+      "The initial dyadic grids alias the oscillation; the independent grid should reveal disagreement.",
+      "Начальные двоичные сетки маскируют колебания; независимая сетка выявляет расхождение.",
+      "Les grilles dyadiques initiales masquent l’oscillation ; la grille indépendante révèle l’écart.",
+      "Початкові двійкові сітки маскують коливання; незалежна сітка виявляє розбіжність.",
+      "Anfängliche dyadische Gitter verschleiern die Schwingung; das unabhängige Gitter zeigt die Abweichung."
+    ],
+    "quartic": [
+      "Simpson is exact for cubics, not generally for quartics.",
+      "Формула Симпсона точна для кубических полиномов, но не в общем случае для четвёртой степени.",
+      "Simpson est exact pour les cubiques, pas en général pour le degré quatre.",
+      "Формула Сімпсона точна для кубічних поліномів, але не загалом для четвертого степеня.",
+      "Simpson ist für kubische Polynome exakt, nicht allgemein für Grad vier."
+    ],
+    "zeroPivot": [
+      "The boundary problem is solvable but unpivoted Thomas elimination cannot proceed.",
+      "Краевая задача разрешима, но прогонка без выбора ведущего элемента не может продолжаться.",
+      "Le problème est résoluble, mais Thomas sans pivot ne peut continuer.",
+      "Крайова задача розв’язна, але прогонка без вибору провідного елемента не може тривати.",
+      "Randwertproblem lösbar, aber Thomas ohne Pivotisierung kann nicht fortfahren."
+    ]
+  },
+  "methods": {
+    "gauss": [
+      {
+        "id": "basic",
+        "level": "basic",
+        "inputs": {
+          "matrix": "4 1\n2 3",
+          "rhs": "6 8",
+          "initial": "",
+          "limit": "1000",
+          "tol": "1e-8"
+        },
+        "problem": "4x₁ + x₂ = 6; 2x₁ + 3x₂ = 8",
+        "answer": "x = (1, 2)",
+        "checks": [
+          {
+            "path": "x.0",
+            "value": 1,
+            "tol": 1e-9
+          },
+          {
+            "path": "x.1",
+            "value": 2,
+            "tol": 1e-9
+          }
+        ],
+        "steps": [
+          "[4, 1 | 6; 2, 3 | 8] → R₂ − ½R₁ → [4, 1 | 6; 0, 2.5 | 5]",
+          "R₂ / 2.5 → [0, 1 | 2]",
+          "R₁ − R₂ → [4, 0 | 4] → R₁ / 4 → [1, 0 | 1]",
+          "Ax − b = (0, 0)"
+        ]
+      },
+      {
+        "id": "academic",
+        "level": "academic",
+        "inputs": {
+          "matrix": "1 3\n3 4",
+          "rhs": "7 11",
+          "initial": "",
+          "limit": "1000",
+          "tol": "1e-8"
+        },
+        "problem": "x + 3y = 7; 3x + 4y = 11",
+        "answer": "x = 1; y = 2",
+        "checks": [
+          {
+            "path": "x",
+            "value": [
+              1,
+              2
+            ],
+            "tol": 1e-9
+          },
+          {
+            "path": "residual",
+            "value": 0,
+            "tol": 1e-9
+          }
+        ],
+        "source": {
+          "name": "Los Angeles City College · LibreTexts §2.2",
+          "url": "https://math.libretexts.org/Courses/Los_Angeles_City_College/Math_230-Mathematics_for_Liberal_Arts_Students/02:_Matrices/2.02:_Systems_of_Linear_Equations_and_the_Gauss-Jordan_Method"
+        },
+        "steps": [
+          "R₂ ← R₂ − 3R₁ → −5y = −10",
+          "y = 2; x = 7 − 3y = 1"
+        ]
+      },
+      {
+        "id": "advanced",
+        "level": "advanced",
+        "inputs": {
+          "matrix": "1 2\n2 4",
+          "rhs": "3 7",
+          "initial": "",
+          "limit": "1000",
+          "tol": "1e-8"
+        },
+        "problem": "x + 2y = 3; 2x + 4y = 7",
+        "answer": "rank(A) = 1; rank([A|b]) = 2",
+        "checks": [
+          {
+            "error": "rank deficient"
+          }
+        ],
+        "note": "inconsistent",
+        "steps": [
+          "R₂ ← R₂ − 2R₁ → 0 = 1"
+        ]
+      }
+    ],
+    "jacobi": [
+      {
+        "id": "basic",
+        "level": "basic",
+        "inputs": {
+          "matrix": "4 1\n2 3",
+          "rhs": "6 8",
+          "initial": "",
+          "limit": "1000",
+          "tol": "1e-8"
+        },
+        "problem": "4x₁ + x₂ = 6; 2x₁ + 3x₂ = 8; x⁽⁰⁾ = (0, 0)",
+        "answer": "x ≈ (1, 2)",
+        "checks": [
+          {
+            "path": "x.0",
+            "value": 1,
+            "tol": 1e-7
+          },
+          {
+            "path": "x.1",
+            "value": 2,
+            "tol": 1e-7
+          },
+          {
+            "path": "status",
+            "value": "Converged"
+          }
+        ],
+        "steps": [
+          "x₁⁽ᵏ⁺¹⁾ = (6 − x₂⁽ᵏ⁾)/4; x₂⁽ᵏ⁺¹⁾ = (8 − 2x₁⁽ᵏ⁾)/3",
+          "x⁽⁰⁾ = (0, 0) → x⁽¹⁾ = (1.5, 8/3)",
+          "x⁽²⁾ = (5/6, 5/3) → x⁽³⁾ = (13/12, 19/9)",
+          "|4| > |1|; |3| > |2|; x⁽ᵏ⁾ → (1, 2)"
+        ]
+      },
+      {
+        "id": "academic",
+        "level": "academic",
+        "inputs": {
+          "matrix": "2 1\n-1 4",
+          "rhs": "3.5 0.5",
+          "initial": "2 1",
+          "limit": "2",
+          "tol": "1e-14"
+        },
+        "problem": "2x + y = 3.5; −x + 4y = 0.5; x⁽⁰⁾ = (2, 1); k = 2",
+        "answer": "x⁽¹⁾ = (1.25, 0.625); x⁽²⁾ = (1.4375, 0.4375)",
+        "checks": [
+          {
+            "path": "history.1.x",
+            "value": [
+              1.25,
+              0.625
+            ],
+            "tol": 1e-9
+          },
+          {
+            "path": "history.2.x",
+            "value": [
+              1.4375,
+              0.4375
+            ],
+            "tol": 1e-9
+          },
+          {
+            "path": "status",
+            "not": "Converged"
+          }
+        ],
+        "source": {
+          "name": "COMP2421 Numerical Computation",
+          "url": "https://uol-soc-teachingrepos.github.io/COMP2421-Numerical-Computation/lec/lec08.html"
+        },
+        "steps": [
+          "x⁽ᵏ⁺¹⁾ = (3.5 − y⁽ᵏ⁾)/2; y⁽ᵏ⁺¹⁾ = (0.5 + x⁽ᵏ⁾)/4",
+          "x⁽¹⁾ = (1.25, 0.625)",
+          "x⁽²⁾ = (1.4375, 0.4375)"
+        ]
+      },
+      {
+        "id": "advanced",
+        "level": "advanced",
+        "inputs": {
+          "matrix": "2e-12 1e-12\n1e-12 2e-12",
+          "rhs": "3e-12 3e-12",
+          "initial": "",
+          "limit": "100",
+          "tol": "1e-8"
+        },
+        "problem": "2·10⁻¹²x + 10⁻¹²y = 3·10⁻¹²; 10⁻¹²x + 2·10⁻¹²y = 3·10⁻¹²",
+        "answer": "x ≈ (1, 1); k > 1",
+        "checks": [
+          {
+            "path": "x",
+            "value": [
+              1,
+              1
+            ],
+            "tol": 1e-7
+          },
+          {
+            "path": "status",
+            "value": "Converged"
+          },
+          {
+            "path": "iterations",
+            "min": 2
+          }
+        ],
+        "note": "scaled"
+      }
+    ],
+    "seidel": [
+      {
+        "id": "basic",
+        "level": "basic",
+        "inputs": {
+          "matrix": "4 1\n2 3",
+          "rhs": "6 8",
+          "initial": "",
+          "limit": "1000",
+          "tol": "1e-8"
+        },
+        "problem": "4x₁ + x₂ = 6; 2x₁ + 3x₂ = 8; x⁽⁰⁾ = (0, 0)",
+        "answer": "x ≈ (1, 2)",
+        "checks": [
+          {
+            "path": "x.0",
+            "value": 1,
+            "tol": 1e-7
+          },
+          {
+            "path": "x.1",
+            "value": 2,
+            "tol": 1e-7
+          },
+          {
+            "path": "status",
+            "value": "Converged"
+          }
+        ],
+        "steps": [
+          "x₁⁽ᵏ⁺¹⁾ = (6 − x₂⁽ᵏ⁾)/4; x₂⁽ᵏ⁺¹⁾ = (8 − 2x₁⁽ᵏ⁺¹⁾)/3",
+          "x⁽⁰⁾ = (0, 0) → x⁽¹⁾ = (1.5, 5/3)",
+          "x⁽²⁾ = (13/12, 35/18)",
+          "|4| > |1|; |3| > |2|; x⁽ᵏ⁾ → (1, 2)"
+        ]
+      },
+      {
+        "id": "academic",
+        "level": "academic",
+        "inputs": {
+          "matrix": "2 -1\n1 3",
+          "rhs": "3 1",
+          "initial": "1 -1",
+          "limit": "3",
+          "tol": "1e-14"
+        },
+        "problem": "2x − y = 3; x + 3y = 1; x⁽⁰⁾ = (1, −1); k = 3",
+        "answer": "x⁽³⁾ = (17/12, −5/36)",
+        "checks": [
+          {
+            "path": "history.1.x",
+            "value": [
+              1,
+              0
+            ],
+            "tol": 1e-9
+          },
+          {
+            "path": "history.2.x",
+            "value": [
+              1.5,
+              -0.16666666666666666
+            ],
+            "tol": 1e-9
+          },
+          {
+            "path": "history.3.x",
+            "value": [
+              1.4166666666666667,
+              -0.1388888888888889
+            ],
+            "tol": 1e-9
+          },
+          {
+            "path": "status",
+            "not": "Converged"
+          }
+        ],
+        "source": {
+          "name": "Durham University · MATH1551, 1.13",
+          "url": "https://maths.dur.ac.uk/users/marianna.pepona/MESProblems/topic-1---linear-algebra.html"
+        },
+        "steps": [
+          "x⁽ᵏ⁺¹⁾ = (3 + y⁽ᵏ⁾)/2; y⁽ᵏ⁺¹⁾ = (1 − x⁽ᵏ⁺¹⁾)/3",
+          "x⁽¹⁾ = (1, 0); x⁽²⁾ = (3/2, −1/6)",
+          "x⁽³⁾ = (17/12, −5/36)"
+        ]
+      },
+      {
+        "id": "advanced",
+        "level": "advanced",
+        "inputs": {
+          "matrix": "1 2\n2 1",
+          "rhs": "3 3",
+          "initial": "0 0",
+          "limit": "8",
+          "tol": "1e-8"
+        },
+        "problem": "x + 2y = 3; 2x + y = 3; k = 8",
+        "answer": "x⁽¹⁾ = (3, −3); x⁽²⁾ = (9, −15)",
+        "checks": [
+          {
+            "path": "history.1.x",
+            "value": [
+              3,
+              -3
+            ],
+            "tol": 1e-9
+          },
+          {
+            "path": "history.2.x",
+            "value": [
+              9,
+              -15
+            ],
+            "tol": 1e-9
+          },
+          {
+            "path": "status",
+            "not": "Converged"
+          }
+        ],
+        "note": "divergent"
+      }
+    ],
+    "det": [
+      {
+        "id": "basic",
+        "level": "basic",
+        "inputs": {
+          "matrix": "4 1\n2 3"
+        },
+        "problem": "A = [[4, 1], [2, 3]]",
+        "answer": "det(A) = 10",
+        "checks": [
+          {
+            "path": "determinant",
+            "value": 10,
+            "tol": 1e-9
+          }
+        ],
+        "steps": [
+          "A = [[4, 1], [2, 3]]",
+          "R₂ ← R₂ − ½R₁ → [[4, 1], [0, 2.5]]",
+          "det(A) = 4 · 2.5 = 10"
+        ]
+      },
+      {
+        "id": "academic",
+        "level": "academic",
+        "inputs": {
+          "matrix": "3 1 2\n0 -1 5\n2 1 4"
+        },
+        "problem": "A = [[3, 1, 2], [0, −1, 5], [2, 1, 4]]",
+        "answer": "det(A) = −13",
+        "checks": [
+          {
+            "path": "determinant",
+            "value": -13,
+            "tol": 1e-9
+          }
+        ],
+        "source": {
+          "name": "Stitz–Zeager · Precalculus §8.5",
+          "url": "https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_(Stitz-Zeager)/08:_Systems_of_Equations_and_Matrices/8.05:_Determinants_and_Cramer%E2%80%99s_Rule"
+        },
+        "steps": [
+          "det(A) = −(3·4 − 2·2) − 5(3·1 − 1·2)",
+          "det(A) = −8 − 5 = −13"
+        ]
+      },
+      {
+        "id": "advanced",
+        "level": "advanced",
+        "inputs": {
+          "matrix": "1 0\n0 1e-16"
+        },
+        "problem": "A = diag(1, 10⁻¹⁶)",
+        "answer": "det(A) = 10⁻¹⁶",
+        "checks": [
+          {
+            "path": "determinant",
+            "value": 1e-16,
+            "tol": 1e-30
+          }
+        ],
+        "note": "smallDet"
+      }
+    ],
+    "inverse": [
+      {
+        "id": "basic",
+        "level": "basic",
+        "inputs": {
+          "matrix": "4 1\n2 3"
+        },
+        "problem": "A = [[4, 1], [2, 3]]",
+        "answer": "A⁻¹ = [[0.3, −0.1], [−0.2, 0.4]]",
+        "checks": [
+          {
+            "path": "inverse",
+            "value": [
+              [
+                0.3,
+                -0.1
+              ],
+              [
+                -0.2,
+                0.4
+              ]
+            ],
+            "tol": 1e-9
+          }
+        ],
+        "steps": [
+          "[A | I] = [4, 1 | 1, 0; 2, 3 | 0, 1]",
+          "R₂ ← R₂ − ½R₁ → [0, 2.5 | −0.5, 1]",
+          "R₂ / 2.5; R₁ ← (R₁ − R₂)/4",
+          "[I | A⁻¹] = [1, 0 | 0.3, −0.1; 0, 1 | −0.2, 0.4]",
+          "AA⁻¹ = I"
+        ]
+      },
+      {
+        "id": "academic",
+        "level": "academic",
+        "inputs": {
+          "matrix": "1 -1 1\n2 3 0\n0 -2 1"
+        },
+        "problem": "A = [[1, −1, 1], [2, 3, 0], [0, −2, 1]]",
+        "answer": "A⁻¹ = [[3, −1, −3], [−2, 1, 2], [−4, 2, 5]]",
+        "checks": [
+          {
+            "path": "inverse",
+            "value": [
+              [
+                3,
+                -1,
+                -3
+              ],
+              [
+                -2,
+                1,
+                2
+              ],
+              [
+                -4,
+                2,
+                5
+              ]
+            ],
+            "tol": 1e-9
+          },
+          {
+            "path": "inverseResidual",
+            "value": 0,
+            "tol": 1e-9
+          }
+        ],
+        "source": {
+          "name": "Los Angeles City College · LibreTexts §2.4",
+          "url": "https://math.libretexts.org/Courses/Los_Angeles_City_College/Math_230-Mathematics_for_Liberal_Arts_Students/02:_Matrices/2.04:_Inverse_Matrices"
+        },
+        "steps": [
+          "det(A) = 1",
+          "[A | I] → [I | A⁻¹]",
+          "AA⁻¹ = I"
+        ]
+      },
+      {
+        "id": "advanced",
+        "level": "advanced",
+        "inputs": {
+          "matrix": "1 0\n0 1e-12"
+        },
+        "problem": "A = diag(1, 10⁻¹²)",
+        "answer": "A⁻¹ = diag(1, 10¹²); κ∞ = 10¹²",
+        "checks": [
+          {
+            "path": "inverse",
+            "value": [
+              [
+                1,
+                0
+              ],
+              [
+                0,
+                1000000000000
+              ]
+            ],
+            "tol": 0.001
+          },
+          {
+            "path": "conditionEstimate",
+            "value": 1000000000000,
+            "tol": 0.001
+          }
+        ],
+        "note": "illConditioned"
+      }
+    ],
+    "newton": [
+      {
+        "id": "basic",
+        "level": "basic",
+        "inputs": {
+          "fn": "x^2-2",
+          "x": "1",
+          "df": "2*x",
+          "limit": "1000",
+          "tol": "1e-8",
+          "stepTol": "1e-8"
+        },
+        "problem": "f(x) = x² − 2; x₀ = 1",
+        "answer": "x ≈ 1.41421356237",
+        "checks": [
+          {
+            "path": "x",
+            "value": 1.4142135623730951,
+            "tol": 1e-7
+          },
+          {
+            "path": "status",
+            "value": "Converged"
+          }
+        ],
+        "steps": [
+          "f′(x) = 2x; xₖ₊₁ = (xₖ + 2/xₖ)/2",
+          "x₀ = 1 → x₁ = 1.5 → x₂ = 17/12",
+          "x₃ = 577/408 ≈ 1.414215686",
+          "x ≈ 1.41421356237; |x² − 2| ≈ 0"
+        ]
+      },
+      {
+        "id": "academic",
+        "level": "academic",
+        "inputs": {
+          "fn": "cos(x)+2*sin(x)+x^2",
+          "x": "0",
+          "df": "-sin(x)+2*cos(x)+2*x",
+          "limit": "100",
+          "tol": ".001",
+          "stepTol": ".001"
+        },
+        "problem": "cos(x) + 2sin(x) + x² = 0; x₀ = 0; ε = 0.001",
+        "answer": "x₄ ≈ −0.6598",
+        "checks": [
+          {
+            "path": "history.0.next",
+            "value": -0.5,
+            "tol": 1e-9
+          },
+          {
+            "path": "history.1.next",
+            "value": -0.6368,
+            "tol": 0.001
+          },
+          {
+            "path": "history.2.next",
+            "value": -0.6589,
+            "tol": 0.001
+          },
+          {
+            "path": "x",
+            "value": -0.6598,
+            "tol": 0.001
+          },
+          {
+            "path": "iterations",
+            "value": 4
+          },
+          {
+            "path": "status",
+            "value": "Converged"
+          }
+        ],
+        "source": {
+          "name": "University of Waterloo · Topic 10.3",
+          "url": "https://ece.uwaterloo.ca/~dwharder/NumericalAnalysis/10RootFinding/newton/complete.html"
+        },
+        "note": "rounding",
+        "steps": [
+          "f′(x) = −sin(x) + 2cos(x) + 2x",
+          "x₁ = 0 − 1/2 = −0.5",
+          "x₂ ≈ −0.6368; x₃ ≈ −0.6589; x₄ ≈ −0.6598"
+        ]
+      },
+      {
+        "id": "advanced",
+        "level": "advanced",
+        "inputs": {
+          "fn": "x^2+1",
+          "x": "0",
+          "df": "2*x",
+          "limit": "20",
+          "tol": "1e-8",
+          "stepTol": "1e-8"
+        },
+        "problem": "x² + 1 = 0; x₀ = 0",
+        "answer": "f′(0) = 0",
+        "checks": [
+          {
+            "path": "status",
+            "value": "Derivative is zero or undefined"
+          }
+        ],
+        "note": "zeroDerivative"
+      }
+    ],
+    "fixed": [
+      {
+        "id": "basic",
+        "level": "basic",
+        "inputs": {
+          "fn": "cos(x)",
+          "x": "0.5",
+          "df": "",
+          "limit": "1000",
+          "tol": "1e-8",
+          "stepTol": "1e-8"
+        },
+        "problem": "g(x) = cos(x); x₀ = 0.5",
+        "answer": "x ≈ 0.7390851332",
+        "checks": [
+          {
+            "path": "x",
+            "value": 0.7390851332,
+            "tol": 1e-7
+          },
+          {
+            "path": "status",
+            "value": "Converged"
+          }
+        ],
+        "steps": [
+          "xₖ₊₁ = cos(xₖ), x₀ = 0.5",
+          "x₁ ≈ 0.877583; x₂ ≈ 0.639012; x₃ ≈ 0.802685",
+          "g([0, 1]) ⊂ [0, 1]; |g′(x)| ≤ sin(1) < 1",
+          "x ≈ 0.7390851332"
+        ]
+      },
+      {
+        "id": "academic",
+        "level": "academic",
+        "inputs": {
+          "fn": "x-(x^2-2)/3",
+          "x": "1",
+          "df": "",
+          "limit": "100",
+          "tol": "1e-12",
+          "stepTol": "1e-12"
+        },
+        "problem": "x² − 2 = 0; g(x) = x − (x² − 2)/3; x₀ = 1",
+        "answer": "x ≈ √2",
+        "checks": [
+          {
+            "path": "history.0.next",
+            "value": 1.3333333333333333,
+            "tol": 1e-9
+          },
+          {
+            "path": "history.1.next",
+            "value": 1.407407407,
+            "tol": 1e-9
+          },
+          {
+            "path": "history.2.next",
+            "value": 1.413808871,
+            "tol": 1e-9
+          },
+          {
+            "path": "history.3.next",
+            "value": 1.414190363,
+            "tol": 1e-9
+          },
+          {
+            "path": "history.4.next",
+            "value": 1.414212235,
+            "tol": 1e-9
+          },
+          {
+            "path": "x",
+            "value": 1.4142135623730951,
+            "tol": 1e-10
+          },
+          {
+            "path": "status",
+            "value": "Converged"
+          }
+        ],
+        "source": {
+          "name": "G. Delius · Numerical Analysis, §3",
+          "url": "https://gustavdelius.github.io/NumericalAnalysis2018-23/chapter03.html"
+        },
+        "steps": [
+          "x₁ = 4/3; x₂ = 38/27",
+          "x₃ ≈ 1.413808871; x₄ ≈ 1.414190363"
+        ]
+      },
+      {
+        "id": "advanced",
+        "level": "advanced",
+        "inputs": {
+          "fn": "x-(x^2-2)",
+          "x": "1",
+          "df": "",
+          "limit": "8",
+          "tol": "1e-12",
+          "stepTol": "1e-12"
+        },
+        "problem": "g(x) = x − (x² − 2); x₀ = 1; k = 8",
+        "answer": "2, 0, 2, 0, 2, 0, 2, 0",
+        "checks": [
+          {
+            "path": "history.0.next",
+            "value": 2,
+            "tol": 1e-9
+          },
+          {
+            "path": "history.1.next",
+            "value": 0,
+            "tol": 1e-9
+          },
+          {
+            "path": "history.7.next",
+            "value": 0,
+            "tol": 1e-9
+          },
+          {
+            "path": "status",
+            "not": "Converged"
+          }
+        ],
+        "source": {
+          "name": "G. Delius · Numerical Analysis, §3",
+          "url": "https://gustavdelius.github.io/NumericalAnalysis2018-23/chapter03.html"
+        },
+        "note": "cycling"
+      }
+    ],
+    "krylov": [
+      {
+        "id": "basic",
+        "level": "basic",
+        "inputs": {
+          "matrix": "4 1\n2 3"
+        },
+        "problem": "A = [[4, 1], [2, 3]]",
+        "answer": "P(λ) = λ² − 7λ + 10; λ = 2, 5",
+        "checks": [
+          {
+            "path": "coefficients",
+            "value": [
+              1,
+              -7,
+              10
+            ],
+            "tol": 1e-9
+          },
+          {
+            "path": "eigenpairs.0.real",
+            "value": 2,
+            "tol": 1e-9
+          },
+          {
+            "path": "eigenpairs.1.real",
+            "value": 5,
+            "tol": 1e-9
+          }
+        ],
+        "steps": [
+          "v = (1, 0)ᵀ; Av = (4, 2)ᵀ; A²v = (18, 14)ᵀ",
+          "A²v − 7Av + 10v = (0, 0)ᵀ",
+          "P(λ) = λ² − 7λ + 10 = (λ − 2)(λ − 5)",
+          "λ = 2: v = (−1, 2)ᵀ; λ = 5: v = (1, 1)ᵀ",
+          "Av = λv"
+        ]
+      },
+      {
+        "id": "academic",
+        "level": "academic",
+        "inputs": {
+          "matrix": "2 4 4\n-2 -2 -5\n0 0 3"
+        },
+        "problem": "A = [[2, 4, 4], [−2, −2, −5], [0, 0, 3]]",
+        "answer": "P(λ) = λ³ − 3λ² + 4λ − 12; λ = 3, ±2i",
+        "checks": [
+          {
+            "path": "coefficients",
+            "value": [
+              1,
+              -3,
+              4,
+              -12
+            ],
+            "tol": 1e-8
+          },
+          {
+            "eigenvalues": [
+              [
+                3,
+                0
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                -2
+              ]
+            ],
+            "tol": 1e-8
+          }
+        ],
+        "source": {
+          "name": "University of Minnesota Duluth · Eigenstuff",
+          "url": "https://www.d.umn.edu/~mhampton/NA/Eigenstuff/"
+        },
+        "note": "krylov",
+        "steps": [
+          "P(λ) = (λ − 3)(λ² + 4)",
+          "λ = 3, 2i, −2i"
+        ]
+      },
+      {
+        "id": "advanced",
+        "level": "advanced",
+        "inputs": {
+          "matrix": "1 0\n0 1.000000000001"
+        },
+        "problem": "A = diag(1, 1 + 10⁻¹²)",
+        "answer": "λ₁ = 1; λ₂ = 1.000000000001",
+        "checks": [
+          {
+            "path": "eigenpairs.0.real",
+            "value": 1,
+            "tol": 1e-15
+          },
+          {
+            "path": "eigenpairs.1.real",
+            "value": 1.000000000001,
+            "tol": 1e-15
+          },
+          {
+            "path": "eigenpairs.0.vectors.length",
+            "value": 1
+          },
+          {
+            "path": "eigenpairs.1.vectors.length",
+            "value": 1
+          }
+        ],
+        "note": "closeEigen"
+      }
+    ],
+    "lagrange": [
+      {
+        "id": "basic",
+        "level": "basic",
+        "inputs": {
+          "xs": "0 1 2",
+          "ys": "0 1 4",
+          "x": "1.5"
+        },
+        "problem": "(0, 0), (1, 1), (2, 4)",
+        "answer": "L(x) = x²; L(1.5) = 2.25",
+        "checks": [
+          {
+            "path": "value",
+            "value": 2.25,
+            "tol": 1e-9
+          }
+        ],
+        "steps": [
+          "ℓ₀(x) = (x − 1)(x − 2)/2; ℓ₁(x) = −x(x − 2); ℓ₂(x) = x(x − 1)/2",
+          "L(x) = 0·ℓ₀(x) + ℓ₁(x) + 4ℓ₂(x)",
+          "L(x) = −x(x − 2) + 2x(x − 1) = x²",
+          "L(1.5) = 2.25"
+        ]
+      },
+      {
+        "id": "academic",
+        "level": "academic",
+        "inputs": {
+          "xs": "0 1 3",
+          "ys": "0 1 2",
+          "x": "2"
+        },
+        "problem": "(0, 0), (1, 1), (3, 2); x = 2",
+        "answer": "L(x) = (7x − x²)/6; L(2) = 5/3",
+        "checks": [
+          {
+            "path": "value",
+            "value": 1.6666666666666667,
+            "tol": 1e-9
+          },
+          {
+            "interpolate": [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                3,
+                2
+              ],
+              [
+                4,
+                2
+              ]
+            ],
+            "tol": 1e-9
+          }
+        ],
+        "source": {
+          "name": "P. Staab · Numerical Analysis §4.2",
+          "url": "https://pstaabp.github.io/numerical-analysis-book/sect-lagrange-interp.html"
+        },
+        "steps": [
+          "L(x) = −x(x − 3)/2 + x(x − 1)/3",
+          "L(x) = (7x − x²)/6"
+        ]
+      },
+      {
+        "id": "advanced",
+        "level": "advanced",
+        "inputs": {
+          "xs": "0 1 3",
+          "ys": "0 1 2",
+          "x": "4"
+        },
+        "problem": "(0, 0), (1, 1), (3, 2); x = 4",
+        "answer": "L(4) = 2",
+        "checks": [
+          {
+            "path": "value",
+            "value": 2,
+            "tol": 1e-9
+          }
+        ],
+        "note": "extrapolate"
+      }
+    ],
+    "trap": [
+      {
+        "id": "basic",
+        "level": "basic",
+        "inputs": {
+          "fn": "x^2",
+          "a": "0",
+          "b": "1",
+          "n": "4",
+          "accuracy": "0"
+        },
+        "problem": "∫₀¹ x² dx; n = 4",
+        "answer": "I₄ = 0.34375; I = 1/3",
+        "checks": [
+          {
+            "path": "value",
+            "value": 0.34375,
+            "tol": 1e-9
+          }
+        ],
+        "steps": [
+          "h = 1/4; f(0) = 0; f(1/4) = 1/16; f(1/2) = 1/4; f(3/4) = 9/16; f(1) = 1",
+          "I₄ = (1/4)(0 + 1/16 + 1/4 + 9/16 + 1/2) = 11/32",
+          "I₈ = 43/128; |I₈ − I₄|/3 = 1/384",
+          "|I₄ − 1/3| = 1/96"
+        ]
+      },
+      {
+        "id": "academic",
+        "level": "academic",
+        "inputs": {
+          "fn": "x^3",
+          "a": "1",
+          "b": "2",
+          "n": "4",
+          "accuracy": "0"
+        },
+        "problem": "∫₁² x³ dx; n = 4",
+        "answer": "I₄ = 3.796875; I = 3.75",
+        "checks": [
+          {
+            "path": "value",
+            "value": 3.796875,
+            "tol": 1e-9
+          }
+        ],
+        "source": {
+          "name": "University of Waterloo · Topic 13.2",
+          "url": "https://ece.uwaterloo.ca/~dwharder/NumericalAnalysis/13Integration/comptrap/examples.html"
+        },
+        "steps": [
+          "h = 1/4",
+          "I₄ = ¼[½ + (5/4)³ + (3/2)³ + (7/4)³ + 4]"
+        ]
+      },
+      {
+        "id": "academic-fine",
+        "level": "academic",
+        "inputs": {
+          "fn": "x^3",
+          "a": "1",
+          "b": "2",
+          "n": "8",
+          "accuracy": "0"
+        },
+        "problem": "∫₁² x³ dx; n = 8",
+        "answer": "I₈ = 3.76171875",
+        "checks": [
+          {
+            "path": "value",
+            "value": 3.76171875,
+            "tol": 1e-9
+          }
+        ],
+        "source": {
+          "name": "University of Waterloo · Topic 13.2",
+          "url": "https://ece.uwaterloo.ca/~dwharder/NumericalAnalysis/13Integration/comptrap/examples.html"
+        },
+        "steps": [
+          "h = 1/8; I₈ = 3.76171875",
+          "|I₈ − I₄|/3 = 0.01171875"
+        ]
+      },
+      {
+        "id": "advanced",
+        "level": "advanced",
+        "inputs": {
+          "fn": "cos(128*pi*x)",
+          "a": "0",
+          "b": "1",
+          "n": "4",
+          "accuracy": "1e-6"
+        },
+        "problem": "∫₀¹ cos(128πx) dx; n₀ = 4; ε = 10⁻⁶",
+        "answer": "I = 0; |Iₙ| ≤ 10⁻⁶",
+        "checks": [
+          {
+            "path": "value",
+            "value": 0,
+            "tol": 0.000001
+          },
+          {
+            "path": "status",
+            "value": "Estimated tolerance reached"
+          }
+        ],
+        "note": "alias"
+      }
+    ],
+    "simpson": [
+      {
+        "id": "basic",
+        "level": "basic",
+        "inputs": {
+          "fn": "x^2",
+          "a": "0",
+          "b": "1",
+          "n": "4",
+          "accuracy": "0"
+        },
+        "problem": "∫₀¹ x² dx; n = 4",
+        "answer": "I₄ = 1/3",
+        "checks": [
+          {
+            "path": "value",
+            "value": 0.3333333333333333,
+            "tol": 1e-9
+          }
+        ],
+        "steps": [
+          "h = 1/4; f(x) = x²",
+          "I₄ = (1/12)[0 + 4(1/16) + 2(1/4) + 4(9/16) + 1]",
+          "I₄ = (1/12) · 4 = 1/3",
+          "I₈ = I₄; |I₈ − I₄|/15 = 0"
+        ]
+      },
+      {
+        "id": "academic",
+        "level": "academic",
+        "inputs": {
+          "fn": "x^3",
+          "a": "1",
+          "b": "2",
+          "n": "2",
+          "accuracy": "0"
+        },
+        "problem": "∫₁² x³ dx; n = 2",
+        "answer": "I₂ = 3.75",
+        "checks": [
+          {
+            "path": "value",
+            "value": 3.75,
+            "tol": 1e-9
+          }
+        ],
+        "source": {
+          "name": "University of Waterloo · Topic 13.4",
+          "url": "https://ece.uwaterloo.ca/~dwharder/NumericalAnalysis/13Integration/newtoncotes/examples.html"
+        },
+        "steps": [
+          "h = 1/2; I₂ = (1/6)[1 + 4(3/2)³ + 8]"
+        ]
+      },
+      {
+        "id": "academic-exp",
+        "level": "academic",
+        "inputs": {
+          "fn": "exp(-0.1*x)",
+          "a": "2",
+          "b": "5",
+          "n": "2",
+          "accuracy": "0"
+        },
+        "problem": "∫₂⁵ e⁻⁰·¹ˣ dx; n = 2",
+        "answer": "I₂ ≈ 2.122006886",
+        "checks": [
+          {
+            "path": "value",
+            "value": 2.122006886,
+            "tol": 1e-9
+          }
+        ],
+        "source": {
+          "name": "University of Waterloo · Topic 13.4",
+          "url": "https://ece.uwaterloo.ca/~dwharder/NumericalAnalysis/13Integration/newtoncotes/examples.html"
+        },
+        "steps": [
+          "h = 1.5; I₂ = 0.5[e⁻⁰·² + 4e⁻⁰·³⁵ + e⁻⁰·⁵]"
+        ]
+      },
+      {
+        "id": "academic-osc",
+        "level": "academic",
+        "inputs": {
+          "fn": "cos(x)+x*exp(-x)",
+          "a": "0",
+          "b": "6",
+          "n": "6",
+          "accuracy": "0"
+        },
+        "problem": "∫₀⁶ [cos(x) + xe⁻ˣ] dx; n = 6",
+        "answer": "I₆ ≈ 0.6876458772",
+        "checks": [
+          {
+            "path": "value",
+            "value": 0.6876458772,
+            "tol": 1e-9
+          }
+        ],
+        "source": {
+          "name": "University of Waterloo · Topic 13.4",
+          "url": "https://ece.uwaterloo.ca/~dwharder/NumericalAnalysis/13Integration/newtoncotes/examples.html"
+        }
+      },
+      {
+        "id": "advanced",
+        "level": "advanced",
+        "inputs": {
+          "fn": "x^4",
+          "a": "0",
+          "b": "1",
+          "n": "4",
+          "accuracy": "0"
+        },
+        "problem": "∫₀¹ x⁴ dx; n = 4",
+        "answer": "I₄ = 0.200520833333; I = 0.2",
+        "checks": [
+          {
+            "path": "value",
+            "value": 0.20052083333333334,
+            "tol": 1e-12
+          }
+        ],
+        "note": "quartic"
+      }
+    ],
+    "sweep": [
+      {
+        "id": "basic",
+        "level": "basic",
+        "inputs": {
+          "p": "0",
+          "q": "0",
+          "fn": "-2",
+          "a": "0",
+          "b": "1",
+          "n": "2",
+          "alpha": "0 1",
+          "beta": "0 1",
+          "A": "0",
+          "B": "0"
+        },
+        "problem": "y″ = −2; y(0) = y(1) = 0",
+        "answer": "y = (0, 1/4, 0)",
+        "checks": [
+          {
+            "path": "points.1.1",
+            "value": 0.25,
+            "tol": 1e-9
+          }
+        ],
+        "steps": [
+          "n = 2; h = 1/2; y₀ = y₂ = 0",
+          "4y₀ − 8y₁ + 4y₂ = −2",
+          "y₁ = 1/4; (y₀, y₁, y₂) = (0, 1/4, 0)",
+          "y(x) = x(1 − x); y″ = −2"
+        ]
+      },
+      {
+        "id": "academic",
+        "level": "academic",
+        "inputs": {
+          "p": "0",
+          "q": "-166",
+          "fn": "-166*293",
+          "a": "0",
+          "b": ".1",
+          "n": "5",
+          "alpha": "0 1",
+          "beta": "0 1",
+          "A": "473",
+          "B": "293"
+        },
+        "problem": "T″ − 166(T − 293) = 0; T(0) = 473; T(0.1) = 293; n = 5",
+        "answer": "T ≈ (473, 424.455861, 384.640390, 350.909842, 321.024507, 293) K",
+        "checks": [
+          {
+            "path": "points",
+            "value": [
+              [
+                0,
+                473
+              ],
+              [
+                0.02,
+                424.45586066
+              ],
+              [
+                0.04,
+                384.64039046
+              ],
+              [
+                0.06,
+                350.9098422
+              ],
+              [
+                0.08,
+                321.02450745
+              ],
+              [
+                0.1,
+                293
+              ]
+            ],
+            "tol": 1e-7
+          }
+        ],
+        "source": {
+          "name": "TU Delft · MUDE §2.9",
+          "url": "https://mude.citg.tudelft.nl/book/2025/numerical_methods/9-boundary-value-problem.html"
+        },
+        "note": "delft",
+        "steps": [
+          "h = 0.02; 2500Tᵢ₋₁ − 5166Tᵢ + 2500Tᵢ₊₁ = −48638",
+          "T₀ = 473; T₅ = 293"
+        ]
+      },
+      {
+        "id": "advanced",
+        "level": "advanced",
+        "inputs": {
+          "p": "0",
+          "q": "0",
+          "fn": "0",
+          "a": "0",
+          "b": "1",
+          "n": "2",
+          "alpha": "1 2",
+          "beta": "0 1",
+          "A": "1",
+          "B": "0"
+        },
+        "problem": "y″ = 0; y′(0) + 2y(0) = 1; y(1) = 0; n = 2",
+        "answer": "y(x) = 1 − x; d₀ = 0",
+        "checks": [
+          {
+            "error": "Sweep pivot"
+          }
+        ],
+        "note": "zeroPivot",
+        "steps": [
+          "y(x) = 1 − x → y′(0) + 2y(0) = 1",
+          "d₀ = 2 − 1/h = 0"
+        ]
+      }
+    ]
+  }
+}

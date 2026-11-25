@@ -43,3 +43,7 @@ Numerical robustness: row-scaled determinant with binary exponent tracking; scal
 Additional diagnostics: estimated augmented rank for rank-deficient systems, conditional local fixed-point error indicator and sweep mesh comparison. The rank and error estimates are not symbolic proofs.
 
 Educational pages use native MathML for their principal formulas and report formula headers, with multi-step worked examples and verified reading links. Method comparison uses the same inputs and explicit fixed-point mappings or fixed quadrature grids; each algorithm retains its own convergence status. Comparison is an on-page diagnostic; the single-method report remains independent.
+
+## Academic examples
+
+`site/examples.json` is the shared source for example inputs, mathematical statements, reference answers, citations, translated explanatory notes and regression assertions. `node scripts/build-site.cjs` generates localized static example cards and `web/examples.js`. Select an example or click Load example to populate the calculator; Solve computes the result. Some advanced examples intentionally fail applicability or convergence. `node --test tests/examples.test.cjs` verifies each published example, including intermediate iteration values. External problems are independently paraphrased; TU Delft node values are independently calculated for the published problem.
