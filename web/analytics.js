@@ -9,7 +9,7 @@
  if(navigator.globalPrivacyControl===true)choice="no";
  const disabled="ga-disable-"+id;window[disabled]=choice!=="yes";
  const ad={ad_storage:"denied",ad_user_data:"denied",ad_personalization:"denied"};
- function start(){if(started||choice!=="yes"||navigator.globalPrivacyControl===true)return;started=true;window[disabled]=false;
+ function start(){if(choice!=="yes"||read()!=="yes"||navigator.globalPrivacyControl===true)return;window[disabled]=false;if(started){window.gtag("consent","update",{...ad,analytics_storage:"granted"});return}started=true;
  window.dataLayer=window.dataLayer||[];window.gtag=window.gtag||function(){window.dataLayer.push(arguments)};
  window.gtag("consent","default",{...ad,analytics_storage:"denied"});
  window.gtag("consent","update",{...ad,analytics_storage:"granted"});
@@ -28,6 +28,7 @@
  yes.addEventListener("click",()=>{if(navigator.globalPrivacyControl===true){choice="no";write("no");stop()}else{choice="yes";write("yes");start()}box.hidden=true;settings.focus()});
  no.addEventListener("click",()=>{choice="no";write("no");stop();box.hidden=true;settings.focus()});
  }
+ window.addEventListener("focus",()=>{const next=navigator.globalPrivacyControl===true?"no":read();if(next===choice)return;choice=next;if(choice==="yes")start();else stop();const panel=document.getElementById("vk-analytics-panel");if(panel)panel.hidden=choice==="yes"||choice==="no"});
  if(choice==="yes")start();else if(navigator.globalPrivacyControl===true)stop();
  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",mount,{once:true});else mount();
 })();
